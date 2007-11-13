@@ -1,0 +1,41 @@
+This is the README file for Lingua::KO::DateTime, module to
+Covert time to korean format
+
+INSTALLATION
+
+To install this module, run the following commands:
+
+	perl Makefile.PL
+	make
+	make test
+	make install
+
+SUPPORT AND DOCUMENTATION
+
+After installing, you can find documentation for this module with the
+perldoc command.
+
+    perldoc Lingua::KO::DateTime
+
+You can also look for information at:
+
+    RT, CPAN's request tracker
+        http://rt.cpan.org/NoAuth/Bugs.html?Dist=Lingua-KO-DateTime
+
+    AnnoCPAN, Annotated CPAN documentation
+        http://annocpan.org/dist/Lingua-KO-DateTime
+
+    CPAN Ratings
+        http://cpanratings.perl.org/d/Lingua-KO-DateTime
+
+    Search CPAN
+        http://search.cpan.org/dist/Lingua-KO-DateTime
+
+
+COPYRIGHT AND LICENCE
+
+Copyright (C) 2007 C.H. Kang
+
+You may distribute under the terms of either the GNU General Public
+License or the Artistic License, as specified in the Perl README file.
+
