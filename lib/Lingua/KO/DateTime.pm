@@ -3,7 +3,7 @@ package Lingua::KO::DateTime;
 use strict;
 use warnings;
 
-our $VERSION='0.01';
+our $VERSION='0.02';
 
 my $charset;
 
@@ -75,7 +75,7 @@ sub convert {
     my ($week,$year,$mon,$day,$hour,$min,$sec,$date,$time);
 
     if (!$args{'asctime'}) {
-        $args{'asctime'}        =       localtime();
+        $args{'asctime'} = localtime();
     }
 
     ($week,$mon,$day,$time,$year) = split(/\s+/,$args{'asctime'});
@@ -87,8 +87,8 @@ sub convert {
 
 
     $date = $year . $dt_string->{$charset}{"year"} . " " .
-    $lc_string->{'month'}{$mon} . $dt_string->{$charset}{"month"} . " " .
-    $lc_string->{'day'}{$day} . $dt_string->{$charset}{"day"};
+            $lc_string->{'month'}{$mon} . $dt_string->{$charset}{"month"} . " " .
+            $lc_string->{'day'}{$day} . $dt_string->{$charset}{"day"};
 
     $time = $hour . $dt_string->{$charset}{"hour"} . " " .
             $min . $dt_string->{$charset}{"minute"} . " " .
@@ -141,7 +141,7 @@ set charset encode.
 
 =over 2
 
-=item * ctime -> input asctime data.
+=item * asctime -> input asctime data.
 
 =item * output -> output in 3 types: date,time,datetime.
 
