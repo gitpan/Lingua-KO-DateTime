@@ -1,6 +1,7 @@
 #!perl -T
 
 use Test::More tests => 4;
+use utf8;
 
 BEGIN {
 	use_ok( 'Lingua::KO::DateTime' );
@@ -8,17 +9,18 @@ BEGIN {
 
 diag( "Testing Lingua::KO::DateTime $Lingua::KO::DateTime::VERSION, Perl $], $^X" );
 
+
 # Test 2
-my $kdt = Lingua::KO::DateTime->new( charset => 'euc-kr' );
+my $kdt = Lingua::KO::DateTime->new();
 my $string = $kdt->convert( asctime => 'Thu Oct 13 04:54:34 1994', output => 'datetime' );
-is ( $string, '1994³â 10¿ù 13ÀÏ 04½Ã 54ºÐ 34ÃÊ', 'coversion is correct' );
+is ( $string, '1994ë…„ 10ì›” 13ì¼ 04ì‹œ 54ë¶„ 34ì´ˆ', 'coversion is correct' );
 
 # Test 3
-$kdt = Lingua::KO::DateTime->new( charset => 'euc-kr' );
+$kdt = Lingua::KO::DateTime->new();
 $string = $kdt->convert( asctime => 'Thu Oct 13 04:54:34 1994', output => 'date' );
-is ( $string, '1994³â 10¿ù 13ÀÏ', 'coversion is correct' );
+is ( $string, '1994ë…„ 10ì›” 13ì¼', 'coversion is correct' );
 
 # Test 4
-$kdt = Lingua::KO::DateTime->new( charset => 'euc-kr' );
+$kdt = Lingua::KO::DateTime->new();
 $string = $kdt->convert( asctime => 'Thu Oct 13 04:54:34 1994', output => 'time' );
-is ( $string, '04½Ã 54ºÐ 34ÃÊ', 'coversion is correct' );
+is ( $string, '04ì‹œ 54ë¶„ 34ì´ˆ', 'coversion is correct' );

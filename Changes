@@ -1,5 +1,8 @@
 Revision history for Lingua-KO-DateTime
 
+0.03    2008-10-25
+        encoding option removed. (Now utf8 only)
+
 0.02    2007-11-14
         Modify Makefile.pl, source code indenting and document error.
 
